@@ -250,6 +250,82 @@
       color: var(--color-accent);
     }
 
+    /* === Donate === */
+    .donate-text {
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+      text-align: center;
+    }
+
+    .donate-actions {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .venmo-qr {
+      max-width: 200px;
+      margin: 0 auto 1.5rem;
+      border-radius: 8px;
+    }
+
+    .donate-btn {
+      display: inline-block;
+      padding: 14px 36px;
+      background-color: var(--color-accent);
+      color: #FAF3E8;
+      font-family: var(--font-body);
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .donate-btn:hover {
+      background-color: #A83A26;
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    .donate-note {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: var(--color-muted);
+      font-style: italic;
+    }
+
+    /* === Footer === */
+    .footer {
+      text-align: center;
+      padding: 40px 24px;
+      background-color: var(--color-text);
+      color: var(--color-muted);
+      font-size: 0.9rem;
+    }
+
+    .footer p {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer p:last-child {
+      margin-bottom: 0;
+    }
+
+    .footer a {
+      color: var(--color-muted);
+    }
+
+    .footer a:hover {
+      color: #FAF3E8;
+    }
+
+    .footer-location {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: #FAF3E8;
+      margin-bottom: 0.75rem;
+    }
+
     /* === Responsive === */
     @media (max-width: 600px) {
       :root {
@@ -344,6 +420,39 @@
       </div>
     </div>
   </section>
+
+  <!-- Divider -->
+  <div class="divider"><div class="divider-diamond"></div></div>
+
+  <!-- Donate -->
+  <section class="section donate">
+    <div class="container">
+      <h2 class="section-title">Help Preserve Happy Canyon Rim</h2>
+      <p class="donate-text">
+        Your support helps protect and maintain this historic landscape for future generations. Every contribution goes directly toward preserving the structures, trails, and natural beauty of Happy Canyon Rim.
+      </p>
+      <p class="donate-text">
+        [Replace this with specific details about the preservation efforts and how donations are used.]
+      </p>
+      <div class="donate-actions">
+        <!-- Uncomment and replace with your actual Venmo QR code image: -->
+        <!-- <img src="images/venmo-qr.png" alt="Scan to donate via Venmo" class="venmo-qr"> -->
+        <a href="https://venmo.com/" class="donate-btn" target="_blank" rel="noopener noreferrer">
+          Donate via Venmo
+        </a>
+        <p class="donate-note">Replace the link above with your actual Venmo URL</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-location">Happy Canyon Rim &mdash; [Location, State]</p>
+      <p class="footer-contact">Contact: <a href="mailto:email@example.com">email@example.com</a></p>
+      <p class="footer-copy">&copy; 2026 Happy Canyon Rim. All rights reserved.</p>
+    </div>
+  </footer>
 
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
