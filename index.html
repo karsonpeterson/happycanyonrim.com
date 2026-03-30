@@ -106,6 +106,50 @@
       flex-shrink: 0;
     }
 
+    /* === Hero === */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 500px;
+      background-image: url('images/house.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: var(--color-overlay);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      color: #FAF3E8;
+      padding: 24px;
+    }
+
+    .hero-title {
+      font-size: 4.5rem;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      margin-bottom: 16px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-tagline {
+      font-family: var(--font-body);
+      font-size: 1.3rem;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    }
+
     /* === Responsive === */
     @media (max-width: 600px) {
       :root {
@@ -119,11 +163,31 @@
       .section-title {
         font-size: 1.8rem;
       }
+
+      .hero {
+        background-attachment: scroll;
+      }
+
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-tagline {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Sections will be added in subsequent tasks -->
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Happy Canyon Rim</h1>
+      <p class="hero-tagline">A piece of the American West, preserved.</p>
+    </div>
+  </header>
+
   <script>
     // Lightbox JS will be added in Task 5
   </script>
