@@ -150,6 +150,45 @@
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
     }
 
+    /* === About === */
+    .about-text {
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+      text-align: center;
+      color: var(--color-text);
+    }
+
+    .about-text:last-child {
+      margin-bottom: 0;
+    }
+
+    /* === Gallery === */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 2rem;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 24px rgba(44, 24, 16, 0.2);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
     /* === Responsive === */
     @media (max-width: 600px) {
       :root {
@@ -175,6 +214,20 @@
       .hero-tagline {
         font-size: 1rem;
       }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item img {
+        height: 220px;
+      }
+    }
+
+    @media (min-width: 601px) and (max-width: 900px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   </style>
 </head>
@@ -187,6 +240,49 @@
       <p class="hero-tagline">A piece of the American West, preserved.</p>
     </div>
   </header>
+
+  <!-- Divider -->
+  <div class="divider"><div class="divider-diamond"></div></div>
+
+  <!-- About -->
+  <section class="section about">
+    <div class="container">
+      <h2 class="section-title">Our Story</h2>
+      <p class="about-text">
+        For generations, this land has been part of our family's history. Nestled along the rim of Happy Canyon, these weathered structures and sweeping desert landscapes tell the story of a life shaped by the American West. The cabins, fences, and corrals that still stand here are testaments to the resilience and spirit of those who called this place home.
+      </p>
+      <p class="about-text">
+        [Your family's story goes here — the history of the property, who built it, what life was like, and what this land means to your family. This is placeholder text that should be replaced with the real story.]
+      </p>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="divider"><div class="divider-diamond"></div></div>
+
+  <!-- Gallery -->
+  <section class="section gallery">
+    <div class="container">
+      <h2 class="section-title">The Land</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/house.jpeg" alt="Historic log cabin on the canyon rim" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/fence_gate.jpeg" alt="Weathered wooden fence gate in the desert" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/chicken_coop.jpeg" alt="Old chicken coop with desert landscape" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/wood_etch_fence.jpeg" alt="Hand-carved inscription on wooden fence" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="images/gate_latch.jpeg" alt="Iron latch on aged wooden gate" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
 
   <script>
     // Lightbox JS will be added in Task 5
